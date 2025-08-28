@@ -1,0 +1,19 @@
+[package]
+name = "benchmark-interruptible-sleep"
+description = """
+benchmarking interruptible sleepers: Rust channel vs Rust Condvar.
+
+How suitable are they for precision timing?
+"""
+version = "0.1.0"
+edition = "2024"
+publish = false
+license = "MIT"
+
+[profile.release]
+lto = true
+codegen-units = 1
+
+[dependencies]
+assert2 = "0.3.16"
+fastrand = "2.3.0"
